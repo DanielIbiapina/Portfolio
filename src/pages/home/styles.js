@@ -150,3 +150,126 @@ export const ProjectLink = styled.a`
     text-decoration: underline;
   }
 `;
+
+export const AboutSection = styled.section`
+  padding: 5rem 2rem;
+  background: ${(props) => props.theme.colors.primary}08;
+
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: ${(props) => props.theme.colors.primary};
+
+    &:after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: ${(props) => props.theme.colors.secondary};
+      margin: 1rem auto;
+    }
+  }
+`;
+
+export const AboutContent = styled.div`
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.8;
+`;
+
+export const HighlightText = styled.span`
+  color: ${(props) => props.theme.colors.secondary};
+  font-weight: 600;
+`;
+
+export const ContactSection = styled.section`
+  padding: 5rem 2rem;
+  background: white;
+
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: ${(props) => props.theme.colors.primary};
+
+    &:after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: ${(props) => props.theme.colors.secondary};
+      margin: 1rem auto;
+    }
+  }
+`;
+
+export const ContactContent = styled.div`
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+`;
+
+export const ContactForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+`;
+
+export const FormGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+
+  label {
+    font-weight: 500;
+    color: ${(props) => props.theme.colors.primary};
+  }
+`;
+
+export const ContactInput = styled.input`
+  padding: 0.8rem;
+  border: 2px solid ${(props) => props.theme.colors.primary}30;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: ${(props) => props.theme.colors.secondary};
+  }
+`;
+
+export const ContactTextarea = styled.textarea`
+  padding: 0.8rem;
+  border: 2px solid ${(props) => props.theme.colors.primary}30;
+  border-radius: 8px;
+  font-size: 1rem;
+  min-height: 150px;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: ${(props) => props.theme.colors.secondary};
+  }
+`;
+
+export const ContactButton = styled.button`
+  padding: 1rem 2rem;
+  background: ${(props) => props.theme.colors.secondary};
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    background: ${(props) => props.theme.colors.secondary}ee;
+  }
+`;

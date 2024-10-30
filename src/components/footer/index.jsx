@@ -23,20 +23,20 @@ function Footer() {
           </p>
           <SocialLinks>
             <a
-              href="https://github.com/seu-usuario"
+              href="https://github.com/DanielIbiapina"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/in/seu-perfil"
+              href="https://linkedin.com/in/daniel-ibiapina"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaLinkedin />
             </a>
-            <a href="mailto:seu-email@email.com">
+            <a href="mailto:daniel18.ibiapinabarros@gmail.com">
               <FaEnvelope />
             </a>
           </SocialLinks>
@@ -62,15 +62,15 @@ function Footer() {
 
         <FooterSection>
           <h3>Contato</h3>
-          <p>Email: seu-email@email.com</p>
-          <p>Localização: Sua Cidade, País</p>
+          <p>Email: daniel18.ibiapinabarros@gmail.com</p>
+          <p>Celular: +55 (85) 99966-3365</p>
         </FooterSection>
       </FooterContent>
 
       <Copyright>
         <p>
-          © {currentYear} Seu Nome. Feito com <FaHeart className="heart" /> em
-          React
+          © {currentYear} Daniel Ibiapina. Feito com{" "}
+          <FaHeart className="heart" /> em React
         </p>
       </Copyright>
     </FooterContainer>

@@ -29,7 +29,7 @@ function Header() {
         </Logo>
         <NavLinks>
           <NavLink scrolled={scrolled} href="#home">
-            Home
+            Início
           </NavLink>
           <NavLink scrolled={scrolled} href="#about">
             Sobre
