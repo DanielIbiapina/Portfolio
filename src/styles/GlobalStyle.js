@@ -15,6 +15,10 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     font-family: ${(props) => props.theme.fonts.main};
     background-color: ${(props) => props.theme.colors.background};

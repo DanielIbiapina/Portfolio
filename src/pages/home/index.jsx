@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import uniqueBeautyImage from "../../assets/uniquebeautycapa.png";
 import parrotCardGameImage from "../../assets/parrotcapa.png";
@@ -61,12 +61,14 @@ function Home() {
         "CSS",
       ],
       demoLink: "https://unique-beauty-btma.vercel.app/",
-      githubLink: "https://github.com/DanielIbiapina/Unique-Beauty",
+      frontendUrl: "https://github.com/DanielIbiapina/Unique-Beauty",
+      backendUrl: "url-do-backend",
+      isFullStack: true,
     },
     {
       id: 2,
       title: "Imobiliária",
-      description: "Um site de imobiliária",
+      description: "Projeto Full Stack de uma imobiliária",
       image: imobiliariaImage,
       tech: [
         "React",
@@ -80,8 +82,10 @@ function Home() {
         "CSS",
       ],
       demoLink: "https://martinsbrokers.vercel.app/",
-      githubLink:
+      frontendUrl:
         "https://github.com/DanielIbiapina/imobiliaria-projetoAutoral-front",
+      backendUrl: "url-do-backend",
+      isFullStack: true,
     },
     {
       id: 3,
@@ -101,6 +105,7 @@ function Home() {
       demoLink:
         "https://projeto14-my-wallet-front-mruy6l0ld-danielibiapinas-projects.vercel.app/",
       githubLink: "https://github.com/DanielIbiapina/Projeto14-MyWallet-front",
+      isFullStack: false,
     },
 
     {
@@ -112,6 +117,7 @@ function Home() {
       tech: ["React", "HTML", "CSS", "JavaScript", "Styled Components"],
       demoLink: "https://projeto11-trackit-mauve-beta.vercel.app/",
       githubLink: "https://github.com/DanielIbiapina/TrackIt",
+      isFullStack: false,
     },
 
     {
@@ -123,6 +129,7 @@ function Home() {
       tech: ["React", "HTML", "CSS", "JavaScript", "Styled Components"],
       demoLink: "https://projeto10-cineflex-eta-jet.vercel.app/",
       githubLink: "https://github.com/DanielIbiapina/Cineflex",
+      isFullStack: false,
     },
     {
       id: 6,
@@ -133,6 +140,7 @@ function Home() {
       tech: ["React", "HTML", "CSS", "JavaScript"],
       demoLink: "https://projeto9-zaprecall-one-psi.vercel.app/",
       githubLink: "https://github.com/DanielIbiapina/Zap-Recall",
+      isFullStack: false,
     },
     {
       id: 7,
@@ -142,6 +150,7 @@ function Home() {
       tech: ["React", "HTML", "CSS", "JavaScript"],
       demoLink: "https://projeto8-jogodaforca-xfbi.vercel.app/",
       githubLink: "https://github.com/DanielIbiapina/Jogo-da-Forca",
+      isFullStack: false,
     },
     {
       id: 8,
@@ -152,6 +161,7 @@ function Home() {
       tech: ["React", "HTML", "CSS", "JavaScript"],
       demoLink: "https://instagram-react-eosin.vercel.app/",
       githubLink: "https://github.com/DanielIbiapina/Instagram-React",
+      isFullStack: false,
     },
     {
       id: 9,
@@ -161,6 +171,7 @@ function Home() {
       tech: ["HTML", "CSS", "JavaScript"],
       demoLink: "https://danielibiapina.github.io/Parrot-Card-Game/",
       githubLink: "https://github.com/DanielIbiapina/Parrot-Card-Game",
+      isFullStack: false,
     },
   ];
 
@@ -177,6 +188,8 @@ function Home() {
       },
     },
   };
+
+  const [showFullStack, setShowFullStack] = useState([]);
 
   return (
     <MainContainer>
@@ -302,13 +315,45 @@ function Home() {
                     >
                       Demo ao vivo
                     </ProjectLink>
-                    <ProjectLink
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Código fonte
-                    </ProjectLink>
+                    {project.isFullStack ? (
+                      showFullStack.includes(project.id) ? (
+                        <>
+                          <ProjectLink
+                            href={project.frontendUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Front
+                          </ProjectLink>
+                          <ProjectLink
+                            href={project.backendUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Back
+                          </ProjectLink>
+                        </>
+                      ) : (
+                        <ProjectLink
+                          onClick={() =>
+                            setShowFullStack([...showFullStack, project.id])
+                          }
+                          style={{ cursor: "pointer" }}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Código fonte
+                        </ProjectLink>
+                      )
+                    ) : (
+                      <ProjectLink
+                        href={project.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Código fonte
+                      </ProjectLink>
+                    )}
                   </ProjectLinks>
                 </ProjectInfo>
               </ProjectCard>
