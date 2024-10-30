@@ -102,10 +102,10 @@ function Home() {
         "Node.js",
         "MongoDB",
       ],
-      demoLink:
-        "https://projeto14-my-wallet-front-mruy6l0ld-danielibiapinas-projects.vercel.app/",
-      githubLink: "https://github.com/DanielIbiapina/Projeto14-MyWallet-front",
-      isFullStack: false,
+      demoLink: "https://projeto14-my-wallet-front-five.vercel.app/home",
+      frontendUrl: "https://github.com/DanielIbiapina/Projeto14-MyWallet-front",
+      backendUrl: "url-do-backend",
+      isFullStack: true,
     },
 
     {

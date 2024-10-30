@@ -4,6 +4,14 @@ export const FooterContainer = styled.footer`
   background-color: ${(props) => props.theme.colors.primary};
   color: white;
   padding: 3rem 0;
+
+  @media (max-width: 768px) {
+    width: 100vw;
+    padding: 2rem 0;
+    margin: 0;
+    left: 0;
+    right: 0;
+  }
 `;
 
 export const FooterContent = styled.div`
@@ -13,6 +21,13 @@ export const FooterContent = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0 1rem;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 `;
 
 export const FooterSection = styled.div`
@@ -30,6 +45,12 @@ export const FooterSection = styled.div`
       height: 2px;
       background-color: ${(props) => props.theme.colors.secondary};
     }
+    @media (max-width: 768px) {
+      &:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
   }
 `;
 
@@ -45,6 +66,9 @@ export const SocialLinks = styled.div`
 
     &:hover {
       color: ${(props) => props.theme.colors.secondary};
+    }
+    @media (max-width: 768px) {
+      justify-content: center;
     }
   }
 `;
@@ -65,6 +89,9 @@ export const QuickLinks = styled.ul`
     &:hover {
       color: ${(props) => props.theme.colors.secondary};
     }
+    @media (max-width: 768px) {
+      text-align: center;
+    }
   }
 `;
 
@@ -83,5 +110,10 @@ export const Copyright = styled.div`
 
   .heart {
     color: ${(props) => props.theme.colors.secondary};
+  }
+  @media (max-width: 768px) {
+    margin: 2rem auto 0;
+    padding: 2rem 1rem 0;
+    width: calc(100% - 2rem);
   }
 `;

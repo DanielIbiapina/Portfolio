@@ -6,6 +6,12 @@ export const MainContainer = styled.main`
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    width: 100vw;
+    overflow-x: hidden;
+  }
 `;
 
 export const HeroSection = styled.section`
@@ -20,11 +26,22 @@ export const HeroSection = styled.section`
   );
   color: white;
   position: relative;
+
+  @media (max-width: 768px) {
+    width: 100vw;
+    left: 0;
+    right: 0;
+  }
 `;
 
 export const HeroContent = styled.div`
   text-align: center;
   z-index: 1;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    padding: 40px 20px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -33,6 +50,10 @@ export const Title = styled.h1`
 
   span {
     color: ${(props) => props.theme.colors.secondary};
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
   }
 `;
 
@@ -55,6 +76,10 @@ export const SocialLinks = styled.div`
     &:hover {
       color: ${(props) => props.theme.colors.secondary};
     }
+  }
+
+  @media (max-width: 768px) {
+    justify-content: center;
   }
 `;
 
@@ -87,6 +112,15 @@ export const ProjectsGrid = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 `;
 
 export const ProjectCard = styled.div`
@@ -98,6 +132,10 @@ export const ProjectCard = styled.div`
 
   &:hover {
     transform: translateY(-10px);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;
 
@@ -126,6 +164,11 @@ export const TechStack = styled.div`
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1rem;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
 `;
 
 export const TechTag = styled.span`
@@ -154,6 +197,8 @@ export const ProjectLink = styled.a`
 export const AboutSection = styled.section`
   padding: 5rem 2rem;
   background: ${(props) => props.theme.colors.primary}08;
+  box-sizing: border-box;
+  width: 100%;
 
   h2 {
     text-align: center;
@@ -170,6 +215,14 @@ export const AboutSection = styled.section`
       margin: 1rem auto;
     }
   }
+
+  @media (max-width: 768px) {
+    width: 100vw;
+    padding: 5rem 1rem;
+    margin: 0;
+    left: 0;
+    right: 0;
+  }
 `;
 
 export const AboutContent = styled.div`
@@ -177,6 +230,11 @@ export const AboutContent = styled.div`
   margin: 0 auto;
   text-align: left;
   line-height: 1.8;
+
+  @media (max-width: 768px) {
+    padding: 20px;
+    text-align: justify;
+  }
 `;
 
 export const HighlightText = styled.span`
@@ -187,6 +245,8 @@ export const HighlightText = styled.span`
 export const ContactSection = styled.section`
   padding: 5rem 2rem;
   background: white;
+  box-sizing: border-box;
+  width: 100%;
 
   h2 {
     text-align: center;
@@ -202,6 +262,14 @@ export const ContactSection = styled.section`
       background: ${(props) => props.theme.colors.secondary};
       margin: 1rem auto;
     }
+  }
+
+  @media (max-width: 768px) {
+    width: 100vw;
+    padding: 5rem 1rem;
+    margin: 0;
+    left: 0;
+    right: 0;
   }
 `;
 
@@ -216,6 +284,11 @@ export const ContactForm = styled.form`
   flex-direction: column;
   gap: 1.5rem;
   margin-top: 2rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 20px;
+  }
 `;
 
 export const FormGroup = styled.div`
