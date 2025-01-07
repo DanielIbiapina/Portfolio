@@ -9,6 +9,7 @@ import cineflexImage from "../../assets/cineflexcapa.png";
 import trackitImage from "../../assets/trackitcapa.png";
 import myWalletImage from "../../assets/mywalletcapa.png";
 import imobiliariaImage from "../../assets/imobiliariacapa.png";
+import indikaImage from "../../assets/indika.jpg";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import {
   AboutSection,
@@ -44,6 +45,28 @@ import {
 function Home() {
   const projects = [
     {
+      id: 10,
+      title: "Indika",
+      description: "Um aplicativo de prestação de serviços",
+      image: indikaImage,
+      tech: [
+        "ReactNative",
+        "React",
+        "Node.js",
+        "PostgreSQL",
+        "JavaScript",
+        "TypeScript",
+        "Prisma",
+        "Styled Components",
+        "HTML",
+        "CSS",
+      ],
+      demoLink: "https://indika-red.vercel.app/",
+      frontendUrl: "url-do-front",
+      backendUrl: "url-do-backend",
+      isFullStack: true,
+    },
+    {
       id: 1,
       title: "Unique Beauty",
       description:
@@ -62,7 +85,7 @@ function Home() {
       ],
       demoLink: "https://unique-beauty-btma.vercel.app/",
       frontendUrl: "https://github.com/DanielIbiapina/Unique-Beauty",
-      backendUrl: "url-do-backend",
+      backendUrl: "https://github.com/DanielIbiapina/Unique-Beauty-Back",
       isFullStack: true,
     },
     {
